@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ramkumar - Ethical Hacker, Cybersecurity Analyst, and Penetration Tester. View skills, terminal console, and interactive cyber-deck projects.">
+    <title>Ramkumar // Ethical Hacker Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Cyber Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Anti-Gravity Particle Debris -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Scanning Overlay Effect -->
+    <div class="scanlines"></div>
+    <div class="cyber-grid-overlay"></div>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <span class="logo-accent">//</span> RAMKUMAR<span class="logo-cursor">_</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user-ninja"></i> About</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-shield-halved"></i> Skills</a>
+                <a href="#terminal" class="nav-link"><i class="fa-solid fa-terminal"></i> Console</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
+            </div>
+
+            <!-- Floating Audio & Status HUD -->
+            <div class="hud-container">
+                <div class="hud-panel status-panel">
+                    <span class="pulse-dot"></span>
+                    <span class="hud-label">SECURE_LINK: ACTIVE</span>
+                </div>
+                <button id="sound-toggle" class="hud-panel audio-panel" aria-label="Toggle Sound Effects">
+                    <i class="fa-solid fa-volume-xmark" id="sound-icon"></i>
+                    <span class="hud-label" id="sound-status">AUDIO: MUTED</span>
+                </button>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Mobile Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#about" class="mobile-link"><i class="fa-solid fa-user-ninja"></i> About</a>
+            <a href="#skills" class="mobile-link"><i class="fa-solid fa-shield-halved"></i> Skills</a>
+            <a href="#terminal" class="mobile-link"><i class="fa-solid fa-terminal"></i> Console</a>
+            <a href="#contact" class="mobile-link"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="cyber-badge-small">// DECK VERSION 2.0.6</div>
+                <h1 class="hero-title" id="glitch-title" data-text="RAMKUMAR">RAMKUMAR</h1>
+                <div class="hero-subtitle-container">
+                    <span class="terminal-prompt">guest@cyberdeck:~$</span>
+                    <span id="typed-subtitle" class="typed-text"></span><span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Cybersecurity Specialist & Ethical Hacker. Investigating threat vectors, hunting vulnerabilities, and safeguarding digital infrastructure.
+                </p>
+                <div class="hero-actions">
+                    <a href="#terminal" class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-terminal"></i> Initialize Console
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-down"></i> Read Dossier
+                    </a>
+                </div>
+            </div>
+            <div class="hero-graphic">
+                <div class="cyber-ring-outer"></div>
+                <div class="cyber-ring-inner"></div>
+                <div class="hero-node-center">
+                    <i class="fa-solid fa-shield-cat"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="about-section scroll-offset">
+            <h2 class="section-title text-center" data-text="Dossier // Profile">Dossier // Profile</h2>
+            <div class="about-grid">
+                <!-- Column 1: Cyber ID Card -->
+                <div class="about-card identity-card float-element" style="--float-delay: 0s;">
+                    <div class="card-glow"></div>
+                    <div class="id-header">
+                        <i class="fa-solid fa-user-shield id-avatar-fallback"></i>
+                        <div class="id-header-meta">
+                            <span class="id-name">RAMKUMAR</span>
+                            <span class="id-role">Threat Specialist</span>
+                        </div>
+                    </div>
+                    <div class="id-body">
+                        <div class="id-field">
+                            <span class="id-field-label">ACCESS LEVEL:</span>
+                            <span class="id-field-value text-neon-green">ROOT / LEVEL-5</span>
+                        </div>
+                        <div class="id-field">
+                            <span class="id-field-label">OPERATING PATH:</span>
+                            <span class="id-field-value">SEC-OPS // RED-TEAM</span>
+                        </div>
+                        <div class="id-field">
+                            <span class="id-field-label">REPUTATION:</span>
+                            <span class="id-field-value text-neon-cyan">WHITE_HAT</span>
+                        </div>
+                        <div class="id-field">
+                            <span class="id-field-label">CREDENTIALS:</span>
+                            <span class="id-field-value">OSCP, CEH, CompTIA Sec+</span>
+                        </div>
+                    </div>
+                    <div class="id-barcode"></div>
+                </div>
+
+                <!-- Column 2: Bio and Mission -->
+                <div class="about-text-container">
+                    <h3 class="cyber-heading"><i class="fa-solid fa-bug-slash text-neon-green"></i> System Breaker. Network Protector.</h3>
+                    <p>
+                        I am a passionate <strong>Cybersecurity Analyst & Ethical Hacker</strong> dedicated to uncovering hidden vulnerabilities before malicious actors exploit them. With deep expertise in defensive architectures, reverse engineering, and threat intelligence, I simulate attacks to secure enterprises.
+                    </p>
+                    <p>
+                        My journey involves conducting comprehensive penetration testing across web applications, wireless infrastructures, and enterprise active directories. By mimicking advanced persistent threat (APT) tactics, I provide actionable recommendations to strengthen network security postures.
+                    </p>
+                    <div class="stats-panel-grid">
+                        <div class="stat-box">
+                            <span class="stat-num text-neon-green">150+</span>
+                            <span class="stat-label">Bugs Patched</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num text-neon-cyan">99.9%</span>
+                            <span class="stat-label">System Hardening</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num text-neon-purple">3+</span>
+                            <span class="stat-label">Years Cyber Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section scroll-offset">
+            <h2 class="section-title text-center" data-text="Capabilities // Toolbelt">Capabilities // Toolbelt</h2>
+            <p class="section-subtitle text-center">
+                Interactive skill nodes. Hover to experience magnetic weightless floating effects.
+            </p>
+            <div class="skills-container">
+                <!-- Linux Node -->
+                <div class="skill-badge float-element" style="--float-delay: 0.2s;" data-skill="linux">
+                    <i class="fa-brands fa-linux skill-icon text-neon-cyan"></i>
+                    <span class="skill-name">Linux / Kernel</span>
+                </div>
+                <!-- Python Node -->
+                <div class="skill-badge float-element" style="--float-delay: 0.8s;" data-skill="python">
+                    <i class="fa-brands fa-python skill-icon text-neon-green"></i>
+                    <span class="skill-name">Python / Scripting</span>
+                </div>
+                <!-- Wireshark/NetSec Node -->
+                <div class="skill-badge float-element" style="--float-delay: 0.5s;" data-skill="wireshark">
+                    <i class="fa-solid fa-network-wired skill-icon text-neon-purple"></i>
+                    <span class="skill-name">Wireshark / NetSec</span>
+                </div>
+                <!-- Metasploit Node -->
+                <div class="skill-badge float-element" style="--float-delay: 1.1s;" data-skill="metasploit">
+                    <i class="fa-solid fa-user-secret skill-icon text-neon-green"></i>
+                    <span class="skill-name">Metasploit / Exploits</span>
+                </div>
+                <!-- Web App Security Node -->
+                <div class="skill-badge float-element" style="--float-delay: 0.3s;" data-skill="webapp">
+                    <i class="fa-solid fa-code skill-icon text-neon-cyan"></i>
+                    <span class="skill-name">Web App Sec / OWASP</span>
+                </div>
+                <!-- Reverse Engineering Node -->
+                <div class="skill-badge float-element" style="--float-delay: 1.4s;" data-skill="reverse">
+                    <i class="fa-solid fa-microchip skill-icon text-neon-purple"></i>
+                    <span class="skill-name">Reverse Engineering</span>
+                </div>
+                <!-- Cryptography Node -->
+                <div class="skill-badge float-element" style="--float-delay: 0.6s;" data-skill="crypto">
+                    <i class="fa-solid fa-key skill-icon text-neon-green"></i>
+                    <span class="skill-name">Cryptography</span>
+                </div>
+                <!-- Incident Response Node -->
+                <div class="skill-badge float-element" style="--float-delay: 0.9s;" data-skill="ir">
+                    <i class="fa-solid fa-triangle-exclamation skill-icon text-neon-cyan"></i>
+                    <span class="skill-name">Incident Response</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMULATED TERMINAL SECTION -->
+        <section id="terminal" class="terminal-section scroll-offset">
+            <h2 class="section-title text-center" data-text="Interactive Console">Interactive Console</h2>
+            <p class="section-subtitle text-center">
+                Direct command line interface to Ramkumar's cyberdeck.
+            </p>
+            
+            <div class="terminal-window-container">
+                <div class="terminal-bar">
+                    <div class="terminal-dots">
+                        <span class="terminal-dot dot-close"></span>
+                        <span class="terminal-dot dot-min"></span>
+                        <span class="terminal-dot dot-max"></span>
+                    </div>
+                    <div class="terminal-title">bash - ramkumar@cyberdeck:~</div>
+                    <div class="terminal-conn-status"><i class="fa-solid fa-wifi text-neon-green"></i> 100mbps</div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-output" id="terminal-output">
+                        <div class="terminal-row">// RAMKUMAR CYBERDECK v1.0.4 - SECURE LINE INITIALIZED</div>
+                        <div class="terminal-row">// TYPE 'help' FOR A LIST OF AVAILABLE INSTRUCTIONS</div>
+                        <div class="terminal-row">&nbsp;</div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">guest@cyberdeck:~$</span>
+                        <input type="text" id="terminal-input" autocomplete="off" aria-label="Terminal Input" placeholder="...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section scroll-offset">
+            <h2 class="section-title text-center" data-text="Secure Comms">Secure Comms</h2>
+            <div class="contact-grid">
+                <!-- Left: Contact Form -->
+                <div class="contact-card float-element" style="--float-delay: 0.1s;">
+                    <div class="card-glow"></div>
+                    <h3 class="contact-card-title"><i class="fa-solid fa-paper-plane text-neon-green"></i> Transmit Message</h3>
+                    
+                    <form id="contact-form" class="cyber-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label for="form-name">CALLSIGN / NAME</label>
+                            <input type="text" id="form-name" required placeholder="Anonymous Node">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">ROUTING / EMAIL</label>
+                            <input type="email" id="form-email" required placeholder="node@network.onion">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">PAYLOAD / MESSAGE</label>
+                            <textarea id="form-message" rows="5" required placeholder="Type your encrypted message transmission..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-glow btn-full" id="submit-btn">
+                            <i class="fa-solid fa-share-nodes"></i> BROADCAST PAYLOAD
+                        </button>
+                    </form>
+                    
+                    <!-- Loading Overlay for Security Scanning -->
+                    <div class="form-scan-overlay" id="form-scan">
+                        <div class="scan-loader">
+                            <div class="scan-bar"></div>
+                            <span class="scan-text">ENCRYPTING PAYLOAD...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Socials & PGP -->
+                <div class="socials-container">
+                    <h3 class="cyber-heading"><i class="fa-solid fa-fingerprint text-neon-cyan"></i> PGP Fingerprint</h3>
+                    <div class="pgp-box">
+                        <div class="pgp-header">
+                            <span>PUBLIC KEY BLOCK (4096-bit RSA)</span>
+                            <i class="fa-solid fa-lock text-neon-green"></i>
+                        </div>
+                        <code class="pgp-body">
+                            -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
+                            mQINBF2W...8J/Xw0zY<br>
+                            Fingerprint: 8F2A E711 0CB9 4A21<br>
+                            DDF6 E9C0 BD31 CFF8 021F B0A5<br>
+                            -----END PGP PUBLIC KEY BLOCK-----
+                        </code>
+                    </div>
+
+                    <h3 class="cyber-heading" style="margin-top: 2rem;"><i class="fa-solid fa-link text-neon-purple"></i> Social Gateways</h3>
+                    <div class="social-links-grid">
+                        <a href="https://github.com" target="_blank" class="social-btn" aria-label="GitHub Gateway">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GITHUB</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn Gateway">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>LINKEDIN</span>
+                        </a>
+                        <a href="mailto:ramkumar@cybersecurity.local" class="social-btn" aria-label="Email Address">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>EMAIL</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <p class="footer-text">
+            &copy; 2026 RAMKUMAR. All rights secured. <span class="text-neon-cyan">SYSTEM DECK STATUS: ACTIVE</span>
+        </p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
